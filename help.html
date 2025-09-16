@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Me</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: #081b29;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container h1 {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 2.5rem;
+            position: relative;
+            color: #00abf0;
+            text-shadow: 1px 1px 1px white;
+            /* background-color: red; */
+
+        }
+
+        .container h1:hover {
+            transform: scale(1.1);
+            transition: .3s;
+            cursor: pointer;
+        }
+
+        .container h1:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #081b29;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: textshow 0.8s linear 0.1s 1 forwards;
+
+        }
+
+        @keyframes textshow {
+            to {
+                width: 0%;
+            }
+        }
+
+        .container p {
+            font-family: inherit;
+            line-height: 2;
+            font-weight: 500;
+            text-indent: 50px;
+            text-align: justify;
+            max-width: 60%;
+            position: relative;
+            transition: transform 0.2s;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: white;
+
+
+        }
+
+        .container p:hover {
+            transition: 0.2s;
+            transform: scale(1.02);
+        }
+
+        .container p::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #081b29;
+            border-radius: 20px;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: pshow .8s linear 0.8s 1 forwards;
+    
+        }
+
+        @keyframes pshow {
+            to {
+                width: 0%;
+            }
+        }
+
+        .container .btn{
+            width: 260px;
+            height: 50px;
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 200px;
+            border: 2px solid #00abf0;
+            flex-shrink: 0;
+        }
+        .container .btn a{
+            font-size: 18px;
+            text-decoration: none;
+            color: white;
+            letter-spacing: 1px;
+            font-weight: bold;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+
+        .container .btn:hover{
+            transition: 0.3s;
+            transform: scale(1.1);
+
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Help Me</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates omnis quod et quo ad repellat architecto, explicabo laborum dignissimos dicta reiciendis eligendi facere in, esse impedit, excepturi quos! Veniam possimus minus, inventore accusantium odit harum impedit facere doloribus. Delectus animi odit laborum quisquam sit. Consequuntur autem aspernatur, voluptas iure quibusdam doloribus est! Quas, ducimus accusantium unde nam aliquid dolores temporibus.</p>
+
+        <div class="btn">
+            <a href="index.html">Go Back to Home Page</a>
+        </div>
+    </div>
+</body>
+
+</html>

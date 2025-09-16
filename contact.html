@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;padding: 0;box-sizing: border-box;
+        }
+        .body{
+            width: 100%;
+            height: 100vh;
+            background-color: #081b29;
+            color: #00abf0;
+            position: relative;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .body .container{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .container h1{
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 2.5rem;
+            position: relative;
+            color: white;
+            /* background-color: red; */
+
+        }
+        .container h1:hover{
+            transform: scale(1.1);
+            transition:  .3s;
+            cursor: pointer;
+            -webkit-text-stroke: #5bb5d8 1px;
+        }
+        .container h1:after{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #081b29;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: textshow 0.8s linear 0.1s 1 forwards;
+
+        }
+        @keyframes textshow {
+            to{
+                width: 0%;
+            }
+        }
+
+
+        .container h2{
+            letter-spacing: 2px;
+            font-size: 2.5rem;
+            position: relative;
+        }
+        .container h2:hover{
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+        .container h2:after{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #081b29;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: numbershow 0.8s linear 1s 1 forwards;
+
+        }
+        @keyframes numbershow {
+            to{
+                width: 0%;
+            }
+        }
+
+
+        .container .btn{
+            width: 200px;
+            height: 50px;
+            background-color: #00abf0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid white; */
+            border-radius: 20px;
+            cursor: pointer;
+            position: relative;
+        }
+        .container .btn:hover{
+            transition: 0.3s;
+            transform: scale(1.1);
+            border: 1px solid white;
+
+        }
+        
+        .container .btn a{
+            text-decoration: none;
+            color: #081b29;
+            font-weight: 600;
+            letter-spacing: 1px;
+
+        }
+        .container .btn::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #081b29;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: btnshow 0.8s linear 1.8s 1 forwards;
+        }
+        @keyframes btnshow{
+            to{
+                width: 0%;
+            }
+        }
+
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="body">
+        <div class="container">
+            <h1>contact me</h1>
+            <h2><span>91+</span> 9876543210</h2>
+            <div class="btn">
+                <a href="index.html">Back To Home Page</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

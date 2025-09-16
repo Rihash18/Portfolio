@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #081b29;
+        }
+
+        .container h1 {
+            /* background-color: red; */
+            text-align: center;
+            color: #00abf0;
+            text-shadow: 0 0 4px black;
+            letter-spacing: 2px;
+            margin: 10px;
+            font-size: 3rem;
+            position: relative;
+            transition: transform 0.2s;
+        }
+
+        .container h1:hover {
+            transition: 0.2s;
+            transform: scale(1.1);
+        }
+
+        .container h1::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-color: inherit;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: h1show .8s linear 0s 1 forwards;
+        }
+
+        @keyframes h1show {
+            to {
+                width: 0%;
+            }
+        }
+
+        .container {
+            height: 100vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-evenly;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+
+        .container p {
+            font-family: inherit;
+            line-height: 2;
+            font-weight: 500;
+            text-indent: 50px;
+            text-align: justify;
+            max-width: 85%;
+            position: relative;
+            transition: transform 0.2s;
+
+        }
+
+        .container p:hover {
+            transition: 0.2s;
+            transform: scale(1.02);
+        }
+
+        .container p::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: inherit;
+            border-radius: 20px;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: pshow .8s linear 0.8s 1 forwards;
+        }
+
+        @keyframes pshow {
+            to {
+                width: 0%;
+            }
+        }
+
+        .container .a {
+            position: relative;
+            width: auto;
+            height: 50px;
+            border-radius: 20px;
+            border: 2px solid #00abf0;
+            box-shadow: 0 0 3px #00abf0;
+            padding: 15px 30px;
+            color: #00abf0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .a a {
+            text-decoration: none;
+            font-size: 20px;
+            font-family: inherit;
+            z-index: 2;
+            background-color: transparent;
+            color: white;
+            user-select: none;
+
+        }
+
+        .container .a::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background-color: #00abf0;
+            z-index: 0;
+            /* border-radius: 20px; */
+        }
+
+        /* just make it fun */
+        .container .a::after {
+            position: absolute;
+            content: '';
+            top: 0;
+            right: 0;
+            width: 0%;
+            height: 100%;
+            background-color: #00abf0;
+            z-index: 0;
+            /* border-radius: 20px; */
+        }
+
+        /*  */
+
+        .a:hover::before {
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: btnlshow .2s linear 0.16s 1 forwards;
+        }
+
+        .a:hover::after {
+            animation: btnrshow .2s linear 0.16s 1 forwards;
+        }
+
+        @keyframes btnlshow {
+            to {
+                width: 55%;
+            }
+        }
+
+        @keyframes btnrshow {
+            to {
+                width: 55%;
+            }
+        }
+
+        .a:hover {
+            border: 0;
+            transform: scale(1.10);
+            transition: transform 0.3s;
+        }
+
+        .a:hover a {
+            color: #081b29;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>About Me</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, corporis magnam laboriosam error, deleniti
+            earum modi soluta numquam dolor repellendus amet ducimus tenetur dolores assumenda sit, ipsa molestias.
+            Consectetur quam placeat minima. Rerum nesciunt dolores aliquid, labore voluptatem blanditiis. Animi qui
+            saepe quisquam voluptatum incidunt, ratione dolor. Labore fugiat cupiditate, repellendus consequuntur
+            similique perspiciatis, sequi deserunt assumenda aut dignissimos tempora delectus nemo molestiae? Est eos
+            distinctio reprehenderit facere optio porro voluptas deleniti iusto nemo, quae, dolore amet excepturi
+            cupiditate enim. Hic iste, quod commodi doloremque, aut quas officia obcaecati, dolor iure impedit non odio
+            quam quis labore qui ad quasi illum iusto. Dolorum, dolores unde vitae, quam optio explicabo repellendus,
+            fugiat quae placeat distinctio culpa. Culpa voluptatem et deserunt facilis quisquam excepturi autem eligendi
+            nesciunt necessitatibus earum accusantium, facere, est veniam dignissimos commodi aspernatur molestias ex
+            sequi quia atque, temporibus ducimus voluptates. Neque illo dignissimos consectetur molestias, placeat
+            inventore doloribus.</p>
+        <div class="a">
+            <a href="index.html">Back To Home Page</a>
+        </div>
+    </div>
+</body>
+
+</html>
